@@ -26,7 +26,7 @@ double CheckInput(string strPrompt);
 
 int main(int argc, char* argv[]) {
 
-    CheckForCommandLineParameters(argc, argv);
+	CheckForCommandLineParameters(argc, argv);
 
 	// sequence container of base object pointers.
 	vector<Shape*> shapeContainer;
@@ -42,32 +42,32 @@ int main(int argc, char* argv[]) {
 
 		// decision logic
 		switch (intSelection) {
-        case 0: // Arrays. This is begging to be cleaned up. Rushed work will do that :-/
-        {
-            bool bViewAgain;
-            string wordArray[12];
-            for (int i = 0; i < sizeof(wordArray)/sizeof(wordArray[0]); i++) {
-                cout << "\nEnter a string (" << (i+1) << " of 12): ";
-                cin >> wordArray[i];
-            }       
-            do {
-                bViewAgain = false;
-                int iIndexSelection;
-                cout << "\nSelect an index (1-12) to view that word in your array: ";
-                cin >> iIndexSelection;
-                for (int i = 0; i < sizeof(wordArray)/sizeof(wordArray[0]); i++) {
-                    if (i + 1 == iIndexSelection) {
-                        cout << "\nYour word: " << wordArray[i] << endl;
-                    }
-                }
-                // check for another run
-		        string strResponse;
-		        cout << "\nCheck array again? (y/n) ";
-		        cin >> strResponse;
-		        if (strResponse == "y" || strResponse == "yes") bViewAgain = true;
-            } while (bViewAgain);
-            break;
-        }
+        	case 0: // Arrays. This is begging to be cleaned up. Rushed work will do that :-/
+        	{
+           		bool bViewAgain;
+            		string wordArray[12];
+            		for (int i = 0; i < sizeof(wordArray)/sizeof(wordArray[0]); i++) {
+                		cout << "\nEnter a string (" << (i+1) << " of 12): ";
+                		cin >> wordArray[i];
+            		}       
+            		do {
+                		bViewAgain = false;
+                		int iIndexSelection;
+                		cout << "\nSelect an index (1-12) to view that word in your array: ";
+                		cin >> iIndexSelection;
+                		for (int i = 0; i < sizeof(wordArray)/sizeof(wordArray[0]); i++) {
+                    			if (i + 1 == iIndexSelection) {
+                        			cout << "\nYour word: " << wordArray[i] << endl;
+                    			}
+                		}
+                		// check for another run
+		        	string strResponse;
+		        	cout << "\nCheck array again? (y/n) ";
+		        	cin >> strResponse;
+		        	if (strResponse == "y" || strResponse == "yes") bViewAgain = true;
+            		} while (bViewAgain);
+            		break;
+        	}
 		case 1: // triangle
 		{
 			double dblSide1, dblSide2;
